@@ -1,0 +1,15 @@
+h1 Test
+
+- @projects.each do |project|
+  table
+    thead
+      tr
+        th colspan = "2" #{project.name}
+      tr
+        th Task
+        th Status
+    tbody
+      - project.tasks.each do |task|
+        tr
+          td #{task.name}
+          td #{task.status}
